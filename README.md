@@ -10,6 +10,7 @@ Idea is inspired on @fabian-lauer project linked below.
 ## Inspiration
 This project is my first on GitHub and with the Victron Venus OS, so I took some ideas and approaches from the following projects - many thanks for sharing the knowledge:
 - https://github.com/fabian-lauer/dbus-shelly-3em-smartmeter
+- https://github.com/vikt0rm/dbus-shelly-1pm-pvinverter
 - https://shelly-api-docs.shelly.cloud/gen2/
 - https://github.com/victronenergy/venus/wiki/dbus#pv-inverters
 
@@ -43,10 +44,12 @@ The following script should do everything for you:
 
 ⚠️⚠️⚠️ UPDATE NEEDED ⚠️⚠️⚠️
 ```sh
-wget https://github.com/zandervalle/dbus-shelly-plus-smartmeter/archive/refs/heads/main.zip
-unzip main.zip "dbus-shelly-plus-smartmeter/*" -d /data
-mv /data/dbus-shelly-plus-pvinverter-main /data/dbus-shelly-plus-pvinverter
+wget https://github.com/zandervalle/dbus-shelly-plus-pvinverter/archive/refs/heads/main.zip
+unzip main.zip 
+mv ./dbus-shelly-plus-pvinverter-main /data/dbus-shelly-plus-pvinverter
 chmod a+x /data/dbus-shelly-plus-pvinverter/install.sh
+# Make changes to your config
+nano /data/dbus-shelly-plus-pvinverter/config.ini
 /data/dbus-shelly-plus-pvinverter/install.sh
 rm main.zip
 ```
